@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>All recipes mobile</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link th:href="@{/css/main_mobile.css}" rel="stylesheet" /> 
+    
+</head>
+<body>
+    <div class="header">
+  <h1>Random recipe</h1>
+</div>
+
+<div class="row">
+
+<div class="col-3 menu">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/recipe/randomfive">Slumpa igen</a></li>
+  </ul>
+</div>
+
+<div class="col-9">
+ <!--    
+    <h1>Alla recept:</h1>
+    </div>
+    <p><a href="/">Home</a></p>
+    <p><a href="/recipe/random">Slumpa igen</a></p>   
+       --> 
+    <table>
+    <tr th:each="Recipe: ${recipes}">
+        <td th:text="${Recipe.recipeName}">Namn</td> 
+        </tr>
+    </table>
+    </div>
+    </div>
+</body>
+</html>

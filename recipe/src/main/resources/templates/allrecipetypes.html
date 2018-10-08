@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All recipes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p>Alla recepttyper: </p>
+    <p><a href="/">Home</a></p>   
+
+  <form action="#" th:action="@{/allrecipetypes}" th:object="${formcommand}" method="post"> 
+  	<p>Textfält: <input type="text" th:field="*{textField}" /></p>
+  <input type="submit" value="submit"/>
+</form>
+<!-- 
+<ul>
+	  <li th:each="checkboxValue: ${MultiCheckboxAll}">
+	  	<input type="checkbox" 
+	  			th:field="*{multiCheckboxSelectedValues}" 
+	  			th:value="${checkboxValue}" />
+	  	<label th:for="${#ids.prev('multiCheckboxSelectedValues')}"
+	  		th:text="${checkboxValue}"></label>
+	  </li>
+  </ul>
+ -->
+
+</body>
+</html>

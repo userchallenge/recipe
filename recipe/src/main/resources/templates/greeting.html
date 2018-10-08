@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>TEST-THYMELEAF</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p>TEST -- Alla recepttyper: </p>
+    <p><a href="/">Home</a></p>   
+
+  <form action="#" th:action="@{/recipetype}" th:object="${formcommand}" method="post"> 
+  	<p>Textfält: <input type="text" th:field="*{textField}" /></p>
+  <input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>

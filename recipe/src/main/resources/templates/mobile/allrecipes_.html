@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="https://cdn.muicss.com/mui-latest/css/mui.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link th:href="@{/css/main_mobile.css}" rel="stylesheet" /> 
+    
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.muicss.com/mui-latest/js/mui.min.js"></script>
+    <script th:src="@{/js/script.js}"></script>
+	<title>All recipes mobile</title>
+</head>
+<body>
+<div id="sidedrawer" class="mui--no-user-select">
+      <div id="sidedrawer-brand" class="mui--appbar-line-height">
+        <span class="mui--text-title">Random menu</span>
+      </div>
+      <div class="mui-divider"></div>
+      <ul>
+        <li>
+          <strong>Activities</strong>
+          <ul>
+            <li><a href="/recipe/randomfive">Get menu</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+    </div>
+
+<header id="header">
+  <div class="mui-appbar mui--appbar-line-height">
+    <div class="mui-container-fluid">
+      <a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
+      <a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
+      <a href="/" class="mui--text-title mui--visible-xs-inline-block">Random menu</a>
+    </div>
+  </div>
+</header>
+<div id="content-wrapper">
+	 <div class="mui--appbar-height"></div>
+    <div class="mui-container-fluid">
+      </div>
+  <table class="mui-table mui-table--bordered">
+  		<thead>
+  		<tr><th>Menyförslag:</th>
+  		</tr>
+  		</thead>
+  		<tbody>
+  		
+	    	<tr th:each="Recipe: ${recipes}">
+	    		<td th:text="${Recipe.recipeName}">Namn</td> 
+	    	</tr>
+    	</tbody>
+    </table>
+    <div>
+    <a href="/recipe/randomfive" class="mui-btn mui-btn--small mui-btn--primary">Slumpa igen</a>
+	</div>
+</div>
+<footer id="footer">
+  <div class="mui-container-fluid">
+    <br></br>
+    Made with ♥ by <a href="https://www.muicss.com">MUI</a>
+  </div>
+</footer>
+</body>
+</html>

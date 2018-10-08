@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All recipes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p>Showform</p>
+  <div>
+    <input type="checkbox" id="1" name="Fisk" value="Fisk"/>
+    <label for="Fisk">Fisk</label>
+  </div>
+  <div>
+    <input type="checkbox" id="2" name="Kött" value="Kött"/>
+    <label for="Kött">Kött</label>
+  </div>
+  <form action="#" th:action="@{/processForm}" th:object="${foo}" method="post">
+  <div th:each="item : ${allItems}">
+    <input type="checkbox" th:field="*{checkedItems}" th:value="${item}" />
+    <label th:text="${item}">example</label>
+  </div>
+  <input type="submit" />
+</form>
+</body>
+</html>
