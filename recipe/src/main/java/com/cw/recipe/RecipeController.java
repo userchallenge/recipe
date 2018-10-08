@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@Controller    // This means that this class is a Controller
+@Controller    // This means that this class is a Controller  ****
 @RequestMapping(path="/recipe") // This means URL's start with /demo (after Application path)
 public class RecipeController {
 	
