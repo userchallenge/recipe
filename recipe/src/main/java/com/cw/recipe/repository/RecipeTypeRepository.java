@@ -1,8 +1,11 @@
-package com.cw.recipe;
+package com.cw.recipe.repository;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
+
+import com.cw.recipe.domain.Recipe;
+import com.cw.recipe.domain.RecipeType;
 
 
 // This will be AUTO IMPLEMENTED by Spring into a Bean called userRepository

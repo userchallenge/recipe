@@ -1,4 +1,4 @@
-package com.cw.recipe;
+package com.cw.recipe.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,12 +6,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity // This tells Hibernate to make a table out of this class
-public class RecipeType {
+public class Recipe {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
-    private String recipeTypeName;
+    private String recipeName;
 
     private Integer recipeType;
 
@@ -23,12 +23,12 @@ public class RecipeType {
 		this.recipeType = recipeType;
 	}
 
-	public String getRecipeTypeName() {
-		return recipeTypeName;
+	public String getRecipeName() {
+		return recipeName;
 	}
 
-	public void setRecipeTypeName(String recipeTypeName) {
-		this.recipeTypeName = recipeTypeName;
+	public void setRecipeName(String recipeName) {
+		this.recipeName = recipeName;
 	}
 
 }

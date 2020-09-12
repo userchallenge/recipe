@@ -1,4 +1,4 @@
-package com.cw.recipe;
+package com.cw.recipe.service;
 
 //import static org.junit.Assert.assertEquals;
 
@@ -9,6 +9,9 @@ import java.util.Collections;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.cw.recipe.domain.Recipe;
+import com.cw.recipe.repository.RecipeRepository;
 
 @Service
 public class RecipeService {

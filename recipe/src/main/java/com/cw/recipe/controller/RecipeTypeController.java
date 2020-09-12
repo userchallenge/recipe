@@ -1,4 +1,4 @@
-package com.cw.recipe;
+package com.cw.recipe.controller;
 
 import java.util.List;
 
@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.cw.recipe.FormCommand;
 
 @Controller    // This means that this class is a Controller
 //@RequestMapping(path="/types") // This means URL's start with /demo (after Application path)

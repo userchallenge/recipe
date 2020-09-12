@@ -1,4 +1,4 @@
-package com.cw.recipe;
+package com.cw.recipe.domain;
 
 public class RecipeChoice {
 
